@@ -19,7 +19,7 @@ resource "aws_lb_target_group" "this" {
   health_check {
     enabled             = false
     protocol            = coalesce(var.target_group_health_protocol, var.target_group_protocol)
-    path                = var.target_group_health_path
+    #path                = var.target_group_health_path
     interval            = var.target_group_health_interval
     #matcher             = var.target_group_health_response
     port                = var.target_group_health_port
